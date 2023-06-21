@@ -3,7 +3,7 @@ from flask import request
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
 from db import items, stores
-
+from schema import ItemSchema, ItemUpdateSchema
 blp = Blueprint("Items",__name__,description="Operations on store items")
 
 
@@ -11,18 +11,9 @@ blp = Blueprint("Items",__name__,description="Operations on store items")
 class ItemList(MethodView):
     def get(self):
         return {"items": list(items.values())}
-
-    def post(self):
-        item_data = request.get_json()
-        if (
-            "name" not in item_data
-            or "price" not in item_data
-            or "store_id" not in item_data
-            ):
-                abort(
-                400,
-                message="Ensure 'price','store_id' and 'name' to be included in the json payload",
-                )
+    
+    @blp.arguments(ItemSchema)
+    def post(self, item_data):
         if item_data["store_id"] not in stores:
             abort(404, message="Store not found")
         for item in items.values():
@@ -35,9 +26,6 @@ class ItemList(MethodView):
         item = { **item_data, "id": item_id}
         items[item_id] = item
         return item, 201  # 201 is created success
-
-
-
 
 @blp.route("/item/<string:item_id>")
 class Item(MethodView):
@@ -53,13 +41,8 @@ class Item(MethodView):
             return {"message": "Store deleted"}
         except KeyError:
             abort(400, message="Store not found")
-    def put(self,item_id):
-        item_data = request.get_json()
-        if "price" not in item_data or "name" not in item_data:
-            abort(
-                400,
-                message="Bad request, Ensure 'price' and 'name' to be included in the JSON paylod",
-                )
+    @blp.arguments(ItemUpdateSchema)
+    def put(self,item_data, item_id):
         try:
             item = items[item_id]
             item |= item_data
