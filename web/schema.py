@@ -1,7 +1,8 @@
-from marshmallow import Schema, fields 
+from marshmallow import Schema, fields
 
-# we use json for two end points 
+# we use json for two end points
 # 1. post and put. That is create and update
+
 
 class ItemSchema(Schema):
     """class for post request schema
@@ -9,10 +10,12 @@ class ItemSchema(Schema):
     Args:
         Schema (class): parent class
     """
+
     id = fields.Str(dump_only=True)
     name = fields.Str(required=True)
     price = fields.Float(required=True)
     store_id = fields.Str(required=True)
+
 
 class ItemUpdateSchema(Schema):
     """class for put request schema
@@ -20,7 +23,7 @@ class ItemUpdateSchema(Schema):
     Args:
         Schema (class): parent class
     """
-    
+
     name = fields.Str()
     price = fields.Float()
 
