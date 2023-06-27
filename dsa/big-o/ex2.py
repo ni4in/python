@@ -1,20 +1,31 @@
-import time 
+import time
 from timeit import Timer
-    
-def linear_func():
-    sum = 0
+
+
+def sum_n():
+    """_summary_
+
+    Returns:
+        _type_: _description_
+    """
+     = 0
     start = time.time()
     for i in range(100):
-        sum+=i
+        sum += i
     end = time.time()
-    return end-start 
+    return end - start
+
 
 def main():
-    print(f"the time takes for linear_func is {linear_func()}")
-    #using timeit module 
-    n = 1000
-    t1 = Timer("linear_func", "from __main__ import linear_func")
-    print(f"the average compute time for {n} iterations is {t1.timeit(number=n)} milliseconds")
+    """_summary_"""
+    print(f"the time takes for sum of n is {sum_n()}")
+    # using timeit module
+    iterations = 1000
+    times = Timer("linear_func", "from __main__ import linear_func")
+    print(
+        f"the average compute time for {iterations} iterations is {times.timeit(number=iterations)} milliseconds"
+    )
+
 
 if __name__ == "__main__":
     main()

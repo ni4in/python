@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{hyperref}
+
 \usetheme{Madrid}
 %Information to be included in the title page:
 \title{Data Strucutres and Algorithms}
@@ -39,11 +40,22 @@ As per \href{https://en.wikipedia.org/wiki/Donald_Knuth}{Donald Knuth}
         \item <1-> Readability : \pause changes with programming language \pause
         \item <2-> Number of Lines : \pause changes with programming language \pause
         \item <3-> Amount of computing resources : \pause changes with programming language\pause
-        \item <4-> Running time : \pause changes with processor speed and language \pause
+        \item <4-> Run time : \pause changes with processor, speed and language \pause
     \end{itemize}
 \end{frame}
 
-
-
+\begin{frame}{Big-O}
+    \begin{block}{Problem Definition}
+        To charactrize the alogrithm in terms of  execution time independent of any particular program or computer
+    \end{block}
+    \pause
+    \begin{block}{Solution}
+        To represent algorithm in terms of operations or steps. If each of these step is a basic compute unit, then execution time of an algorithm is the total number of compute units
+    \end{block}
+    \pause
+    \begin{alertblock}{Note}
+        Deciding on basic computation unit can be complicated and depend on how algorithm is implemented
+    \end{alertblock}
+\end{frame}
 
 \end{document}

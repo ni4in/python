@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1687663097 "/Users/nithinvadekkapat/Work/python/dsa/latex/Intro.tex" "Intro.pdf" "Intro" 1687663098 0
-  "/Users/nithinvadekkapat/Work/python/dsa/latex/Intro.tex" 1687663097 1435 b5e93dc21ac2c67166b8f5769da8c1df ""
+["pdflatex"] 1687851935 "/Users/nithinvadekkapat/Work/python/dsa/latex/Intro.tex" "Intro.pdf" "Intro" 1687851937 0
+  "/Users/nithinvadekkapat/Work/python/dsa/latex/Intro.tex" 1687851934 2038 a41a76427536d2fc094f678682239a2d ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmss10.tfm" 1136768653 1316 b636689f1933f24d1294acdf6041daaa ""
@@ -174,11 +174,11 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1684425956 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1684425911 7883455 938180f2acef8909a469ea0b2292a446 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "Intro.aux" 1687663098 1660 2983bb3fa2e5f4d789e3f907413f0700 "pdflatex"
-  "Intro.nav" 1687663098 745 3dd6eb811c89d987a91afbac8efef973 "pdflatex"
-  "Intro.out" 1687663098 136 53b202cdb6e4394bbd6a44e32d7dc4af "pdflatex"
-  "Intro.tex" 1687663097 1435 b5e93dc21ac2c67166b8f5769da8c1df ""
-  "Intro.toc" 1687663098 54 9a1006a688fa21a17050920fe90e03ac "pdflatex"
+  "Intro.aux" 1687851937 1788 0df8979a6c8007920f1be6f80786d078 "pdflatex"
+  "Intro.nav" 1687851937 837 7a9722028fec9954d3d7cacc6b5658f2 "pdflatex"
+  "Intro.out" 1687851937 136 53b202cdb6e4394bbd6a44e32d7dc4af "pdflatex"
+  "Intro.tex" 1687851934 2038 a41a76427536d2fc094f678682239a2d ""
+  "Intro.toc" 1687851937 54 9a1006a688fa21a17050920fe90e03ac "pdflatex"
   (generated)
   "Intro.aux"
   "Intro.log"
