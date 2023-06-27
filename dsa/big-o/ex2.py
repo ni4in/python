@@ -1,13 +1,11 @@
 import time 
 from timeit import Timer
     
-def linear_func():
-    sum = 0
-    start = time.time()
-    for i in range(100):
-        sum+=i
-    end = time.time()
-    return end-start 
+def sum_of_n(n):
+    total = 0
+    for i in range(n):
+        total+=i
+    return total
 
 def main():
     print(f"the time takes for linear_func is {linear_func()}")

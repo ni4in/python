@@ -1,4 +1,4 @@
-#!/Users/nithinvadekkapat/Work/python/dsa/.venv/bin/python3.11
+#!/home/nithin/Work/python/dsa/.venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
