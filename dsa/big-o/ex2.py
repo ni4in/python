@@ -2,17 +2,20 @@ import time
 from timeit import Timer
 
 
-def sum_n():
-    """_summary_
+def sum_of_n(n):
+    """sum to total numbers
 
     Returns:
         _type_: _description_
     """
-     = 0
+    total = 0
+    for i in range(n):
+        total += i
+    return total
+
 
 def main():
-    """_summary_"""
-    print(f"the time takes for sum of n is {sum_n()}")
+    """main function"""
     # using timeit module
     iterations = 1000
     times = Timer("linear_func", "from __main__ import linear_func")
