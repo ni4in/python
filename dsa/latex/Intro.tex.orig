@@ -1,0 +1,144 @@
+\documentclass{beamer}
+\usepackage{hyperref}
+
+\usetheme{Madrid}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% defining the syle for python code listing
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    language=Python,
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+%Information to be included in the title page:
+\title{Data Strucutres and Algorithms}
+\author{Nithin}
+\institute{}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents
+\end{frame}
+\section{Algorithm Analysis}
+\begin{frame}
+\frametitle{What is Algorithm?}
+As per \href{https://en.wikipedia.org/wiki/Donald_Knuth}{Donald Knuth}
+\begin{alertblock}{Algorithm}
+     A definite, effective and finite process that receives input and produces an output
+\end{alertblock}
+\begin{description}
+    \item [Definite :] steps are clear, concise and unambigious
+    \item [Effective :] you can perform each operation precisely 
+    \item [Finite :] finite number of steps
+\end{description}
+\begin{alertblock}{Analysis}
+    When two programs solve the same problem, Analysis is finding answer to the question which one is \alert{better}?
+\end{alertblock}
+
+\end{frame}
+
+
+\begin{frame}{Better on?}
+    \begin{itemize}
+        \item <1-> Readability : \pause changes with programming language \pause
+        \item <2-> Number of Lines : \pause changes with programming language \pause
+        \item <3-> Amount of computing resources : \pause changes with programming language\pause
+<<<<<<< HEAD
+        \item <4-> Run time : \pause changes with processor speed, compiler and programminglanguage \pause
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{An example : Checking the run time}
+    \href{run://home/nithin/Work/python/dsa/big-o/}{our first example}
+\end{frame}
+
+\begin{frame}{Big-O Notation}
+\begin{block}{Requirement}
+    To charactrize an algorithm's efficiency in terms of execution time, independet of any particular program or computer
+\end{block}
+\begin{block}{Solution}
+    To quanitfy the algorithm in terms of number of operations or steps 
+\end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{$T(n)$}
+    \begin{block}{}
+        $T(n)$ is a function that indicates the time an algorithm takes to solve a problem of size $n$
+    \end{block} 
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Example 1}
+    \begin{lstlisting}
+        def sum_of_n(n):
+            total = 0
+            for i in range(n):
+                total+=i
+            return total
+    
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}
+        \item For \textcolor{red}{sum\_of\_n}, we can take the basic compute step as the assignment operations
+        \item In \textcolor{red}{sum\_of\_n} following are the assignment operations 
+        \begin{itemize}
+            \item \textcolor{red}{sum = 0}
+            \item \textcolor{red}{sum$+=n$}
+        \end{itemize}
+        \item $T(n) = n+1 $
+        \item We are only interested in the dominant term in $T(n)$, beacuse as $n$ increases faster compared to other terms, i.e it overpowers the rest
+    \end{itemize}
+    \begin{alertblock}{Big-O}
+        The dominant term in $T(n)$ , which can be termed as \alert{order of magnitude} function. Big-O $\implies$ Biggest Order
+        
+    \end{alertblock}
+
+=======
+        \item <4-> Run time : \pause changes with processor, speed and language \pause
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Big-O}
+    \begin{block}{Problem Definition}
+        To charactrize the alogrithm in terms of  execution time independent of any particular program or computer
+    \end{block}
+    \pause
+    \begin{block}{Solution}
+        To represent algorithm in terms of operations or steps. If each of these step is a basic compute unit, then execution time of an algorithm is the total number of compute units
+    \end{block}
+    \pause
+    \begin{alertblock}{Note}
+        Deciding on basic computation unit can be complicated and depend on how algorithm is implemented
+    \end{alertblock}
+>>>>>>> 73d2c6fb5753dab9452bbb915cf5a728d85de4f8
+\end{frame}
+
+\end{document}

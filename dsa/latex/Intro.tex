@@ -44,6 +44,7 @@
     \tableofcontents
 \end{frame}
 \section{Algorithm Analysis}
+\subsection{Big-O}
 \begin{frame}
 \frametitle{What is Algorithm?}
 As per \href{https://en.wikipedia.org/wiki/Donald_Knuth}{Donald Knuth}
@@ -67,7 +68,7 @@ As per \href{https://en.wikipedia.org/wiki/Donald_Knuth}{Donald Knuth}
         \item <1-> Readability : \pause changes with programming language \pause
         \item <2-> Number of Lines : \pause changes with programming language \pause
         \item <3-> Amount of computing resources : \pause changes with programming language\pause
-        \item <4-> Run time : \pause changes with processor speed, compiler and programminglanguage \pause
+        \item <4-> Run time : \pause changes with processor speed, compiler and programminglanguage
     \end{itemize}
 \end{frame}
 
@@ -121,4 +122,199 @@ As per \href{https://en.wikipedia.org/wiki/Donald_Knuth}{Donald Knuth}
 
 \end{frame}
 
+\begin{frame}
+frametitle{Common Big-O functions}
+
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{Quiz 1}
+    What is the Big-O for the program given below :
+    \begin{lstlisting}
+        a=5
+        b=6
+        c = 10
+        for i in range(n):
+            for j in range(n): 
+                x=i*i 
+                y=j*j
+                z=i*j
+        for k in range(n): 
+            w = a * k + 45
+            v=b*b 
+        d = 33
+    \end{lstlisting}
+    \pause 
+    $T(n)  = 3n^{2} + 2n + 4 \implies O(n^{2})$
+    
+    
+\end{frame}
+\subsection{Anagram Example}
+\begin{frame}
+    \frametitle{Anagram}
+    \begin{block}
+        A string is an anagram of another if second is simply a rearrangment of the first. For example \alert{python} and \alert{typhon}
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Solution 1: Checking off }
+    \begin{lstlisting}{language=Python}
+        def anagram_sol1(word1, word2):
+            word2_list = list(word2)
+            index1=0
+            is_anagram = True
+            while index1 < len(word1) and is_anagram:
+                index2=0
+                is_continue = True
+                while index2 < len(word2_list) and is_continue:
+                    if word1[index1] == word2_list[index2]:
+                        word2_list[index2] = None 
+                        is_anagram = True
+                        is_continue = False
+                    else:
+                        is_anagram = False
+                        is_continue = True
+                        index2+=1
+                index1+=1
+            return is_anagram       
+    \end{lstlisting}
+\end{frame}
+\begin{frame}{Solution 1: Big-O}
+    \begin{example}{}
+        Each letter in word1 has to iterate a maximum of n locations to find a match. That is 
+        \[ \color{violet} \sum_{i=1}^{n} i  = \frac{n(n+1)}{2} = \frac{n^{2} + n}{2} \]
+        
+    \end{example}
+    
+\end{frame}
+\begin{frame}[fragile]{Solution 2: Sort and Compare}
+    \begin{lstlisting}{language=Python}
+        def anagram_sol2(word1, word2):
+            word1_list = list(word1)
+            word2_list = list(word2)
+            word1_list.sort()
+            word2_list.sort()
+            index=0
+            while index < len(word1_list):
+                if word1_list[index] != word2_list[index]:
+                    return False
+                index+=1
+            return True
+    \end{lstlisting}
+    
+\end{frame}
+\begin{frame}{Solution 2: Big-O}
+    \begin{block}{}
+        There is a single iteration of n if there is a match but the sort operation takes the precedence due to it's $\color{violet}O(n^{2})$ or $\color{violet}O(n\log n)$ complexity          
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}{Solution 3: Brute Force}
+    \begin{block}{}
+        This tries to exhaust all possibilities. Here we genrate all possible anagrams of \alert{word1} and matches this with \alert{word2}. For a word of length $\color{violet} n$, there are $\color{violet}n!$
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}[fragile]{Solution 4: Count and Compare}
+    \begin{lstlisting}
+    def anagram_sol4(word1,word2):
+        counter1 = [0]*26
+        counter2 = [0]*26
+        offset = ord('a')
+        for letter in word1:
+            counter1[ord(letter)-offset]+=1
+        for letter in word2:
+            counter2[ord(letter)-offset]+=1
+        for index in range(26):
+            if counter1[index] != counter2[index]:
+                return False
+        return True
+    \end{lstlisting}
+    \pause
+    \begin{block}{}
+        \[\color{violet} T(n) = 2n + 26 \implies O(n) \]
+        The solution above can run in linear time but required more space requirements than the other solutions
+    \end{block}
+    
+\end{frame}
+
+\section{Basic Data Strucutres}
+\subsection{Linear Data Strucutre}
+\begin{frame}{Linear Strucutres}
+    \begin{alertblock}{What is Linear Data Strucutre?}
+        \begin{itemize}
+            \item Data structures in which each element stays its position relative to the elements before and after.
+            \item Examples are Stacks, Queues, Deques and Lists
+            \item The difference are in the way items are added or removed
+        \end{itemize}
+    \end{alertblock}
+\end{frame}
+\subsection{Stack}
+\begin{frame}{Stack}
+    \begin{alertblock}{What is a Stack?}
+        A \alert{stack} is an ordered collection of items where the addition of new item and the removal of existing items always takes place at the same end 
+    \end{alertblock}
+    \begin{itemize}
+        \item also known as \alert{Last-In-First-Out(LIFO)}
+        \item Newer items are in the top and older items are at the bottom
+        \item Browser \alert{Back} button is an example of stack
+    \end{itemize}
+\end{frame}
+
+
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
