@@ -1,9 +1,11 @@
-\frametitle{Example 1}
-    \begin{lstlisting}
-        def sum_of_n(n):
-            total = 0
-            for i in range(n):
-                total+=i
-            return total
+\begin{lstlisting}
+                else:
+                    pass
+                index+=1
+            # to check if the stack is empty and check the balance flag
+            if para_stack.is_empty() and is_check:
+                return f"balanced"
+            else:
+                return f"unbalanced"
 
     \end{lstlisting}

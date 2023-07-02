@@ -1,0 +1,14 @@
+<<<<<<< HEAD
+.venv
+=======
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.pytxcode
+*.snm
+*.synctex.gz
+*.toc
+>>>>>>> 73d2c6fb5753dab9452bbb915cf5a728d85de4f8
