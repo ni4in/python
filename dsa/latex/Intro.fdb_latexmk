@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1688123575 "/home/nithin/Work/python/dsa/latex/Intro.tex" "Intro.pdf" "Intro" 1688123576 0
+["pdflatex"] 1688265567 "/home/nithin/Work/python/dsa/latex/Intro.tex" "Intro.pdf" "Intro" 1688265568 0
   "/etc/texmf/web2c/texmf.cnf" 1683894741 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/nithin/Work/python/dsa/latex/Intro.tex" 1688123575 8803 5fc5a39de45caafae19e4df87afd8c12 ""
+  "/home/nithin/Work/python/dsa/latex/Intro.tex" 1688265567 10746 e95e9dd19f5ee98202981542a13c6f5a ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -209,12 +209,12 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1676468108 39561 34c98e380bf7c7201ee6a7909aff625a ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1683894754 4623455 fa0568a71dd9a288d6c226ee477506c6 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1685507912 7882553 bd3a952fd9cd38ab25da371b7fcd418f ""
-  "Intro.aux" 1688123576 5174 ac260f08be8b6dd40a79cb3c9b00ba4c "pdflatex"
-  "Intro.nav" 1688123576 3028 3f0b2815b4f4814df4219fc14b4bfed2 "pdflatex"
-  "Intro.out" 1688123576 760 ec931d8bc58e6eb2f2fc48e94fe6eff5 "pdflatex"
-  "Intro.tex" 1688123575 8803 5fc5a39de45caafae19e4df87afd8c12 ""
-  "Intro.toc" 1688123576 329 e0f47ff8b9db3788bdbc69cd1768ad75 "pdflatex"
-  "Intro.vrb" 1688123576 691 35a24c11b85a8ecd77da028f37c5da7c "pdflatex"
+  "Intro.aux" 1688265568 5573 9c776c52d69b12c018cf8143617bb0b0 "pdflatex"
+  "Intro.nav" 1688265568 3319 30abcf745293dba898a0aaebb2c7f5dd "pdflatex"
+  "Intro.out" 1688265568 760 ec931d8bc58e6eb2f2fc48e94fe6eff5 "pdflatex"
+  "Intro.tex" 1688265567 10746 e95e9dd19f5ee98202981542a13c6f5a ""
+  "Intro.toc" 1688265568 329 e0f47ff8b9db3788bdbc69cd1768ad75 "pdflatex"
+  "Intro.vrb" 1688265568 326 493ee2d37f81a1b4607fc8e9d095a088 "pdflatex"
   (generated)
   "Intro.aux"
   "Intro.log"

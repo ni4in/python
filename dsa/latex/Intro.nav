@@ -52,8 +52,14 @@
 \headcommand {\beamer@subsectionentry {0}{2}{2}{29}{Stack}}
 \headcommand {\slideentry {2}{2}{1}{29/29}{Stack}{0}}
 \headcommand {\beamer@framepages {29}{29}}
-\headcommand {\beamer@partpages {1}{29}}
-\headcommand {\beamer@subsectionpages {29}{29}}
-\headcommand {\beamer@sectionpages {28}{29}}
-\headcommand {\beamer@documentpages {29}}
-\headcommand {\gdef \inserttotalframenumber {20}}
+\headcommand {\slideentry {2}{2}{2}{30/30}{Stack}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\slideentry {2}{2}{3}{31/31}{Stack}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\slideentry {2}{2}{4}{32/32}{Stack}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\beamer@partpages {1}{32}}
+\headcommand {\beamer@subsectionpages {29}{32}}
+\headcommand {\beamer@sectionpages {28}{32}}
+\headcommand {\beamer@documentpages {32}}
+\headcommand {\gdef \inserttotalframenumber {23}}

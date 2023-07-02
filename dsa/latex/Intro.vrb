@@ -1,21 +1,11 @@
-\frametitle{Solution 4: Count and Compare}
 \begin{lstlisting}
-    def anagram_sol4(word1,word2):
-        counter1 = [0]*26
-        counter2 = [0]*26
-        offset = ord('a')
-        for letter in word1:
-            counter1[ord(letter)-offset]+=1
-        for letter in word2:
-            counter2[ord(letter)-offset]+=1
-        for index in range(26):
-            if counter1[index] != counter2[index]:
-                return False
-        return True
-    \end{lstlisting}
-    \pause
-    \begin{block}{}
-        \[\color{violet} T(n) = 2n + 26 \implies O(n) \]
-        The solution above can run in linear time but required more space requirements than the other solutions
-    \end{block}
+                else:
+                    pass
+                index+=1
+            # to check if the stack is empty and check the balance flag
+            if para_stack.is_empty() and is_check:
+                return f"balanced"
+            else:
+                return f"unbalanced"
 
+    \end{lstlisting}
