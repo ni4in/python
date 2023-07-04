@@ -11,15 +11,16 @@ def in2post(symbol_str):
     op_stack = Stack()
     postfix_str = []
     token_lst = symbol_str.split()
+    # print(token_lst)
 
     for token in token_lst:
         if token in "ABCDEFGHIJKLMNOPRSTUVWXYZ" or token in "0123456789":
             postfix_str.append(token)
         elif token == "(":
             op_stack.push(token)
-            print(op_stack.items)
         elif token == ")":
-            for __ in range(op_stack.size()):
+            n = op_stack.size()
+            for __ in range(n):
                 top_item = op_stack.pop()
                 if top_item == "(":
                     break
@@ -27,15 +28,31 @@ def in2post(symbol_str):
         elif token in "*/+-":
             if op_stack.is_empty():
                 op_stack.push(token)
-            if op_prec[token] <= op_prec[op_stack.peek()]:
-                for __ in range(op_stack.size()):
+            elif op_prec[token] <= op_prec[op_stack.peek()]:
+                n = op_stack.size()
+                for __ in range(n):
                     top_item = op_stack.peek()
-                    if top_item == "(":
-                        break
-                    postfix_str.append(top_item)
+                    if op_prec[top_item] >= op_prec[token]: 
+                        postfix_str.append(op_stack.pop())
+                op_stack.push(token)
+            else:
+                op_stack.push(token)
+    if not op_stack.is_empty():
+        n = op_stack.size()
+        for __ in range(n):
+            postfix_str.append(op_stack.pop())
 
-    return postfix_str, op_stack.items
+    return ''.join(postfix_str)
 
 
-x, y = in2post("( A + B ) * C")
-print(x, y)
+def main():
+    str_symbol= ['( A + B ) * ( C * D )', 'A + B * C + D', 'A * B + C * D', 'A + B + C + D', '( A + B ) * C']
+    for symbol in str_symbol:
+        print(f'postfix of {symbol} = {in2post(symbol)}')
+
+
+    # print(f'postfix of {str_symbol[1]} = {in2post(str_symbol[1])}')
+
+
+if __name__ == "__main__":
+    main()
