@@ -1,5 +1,5 @@
 from stack import Stack 
-def in2post(symbol_str):
+def infix_to_postfix(symbol_str):
     op_prec = {}
     op_prec["("] = 1
     op_prec["+"] = 2
@@ -35,7 +35,7 @@ def main():
     # # str_symbol= ['( A + B ) * ( C * D )', 'A + B * C + D', 'A * B + C * D', 'A + B + C + D', '( A + B ) * C']
     # for symbol in str_symbol:
     #     print(f'postfix of {symbol} = {in2post(symbol)}')
-    print(in2post('( A + B ) * ( C + D )'))
+    print(infix_to_postfix('( A + B ) * ( C + D )'))
 
 if __name__ == "__main__":
     main()
