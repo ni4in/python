@@ -3,4 +3,5 @@
 \beamer@subsectionintoc {1}{2}{Anagram Example}{20}{0}{1}
 \beamer@sectionintoc {2}{Basic Data Strucutres}{28}{0}{2}
 \beamer@subsectionintoc {2}{1}{Linear Data Strucutre}{28}{0}{2}
-\beamer@subsectionintoc {2}{2}{Stack}{29}{0}{2}
+\beamer@subsubsectionintoc {2}{1}{1}{Stack}{29}{0}{2}
+\beamer@subsubsectionintoc {2}{1}{2}{Queues}{35}{0}{2}
